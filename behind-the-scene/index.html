@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Behind The Scene — Le tournage devient votre contenu</title>
+  <meta name="description" content="Behind The Scene crée directement sur les plateaux des contenus courts pour raconter les films autrement sur les réseaux sociaux.">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ EN-TÊTE ============ -->
+  <header class="topbar">
+    <a href="#top" class="topbar__logo">Behind<span>The</span>Scene</a>
+    <a href="#contact" class="topbar__link">Contact</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <!--
+          VIDÉO DE FOND : décommente la balise <video> ci-dessous et place ton fichier
+          dans assets/videos/hero.mp4 (idéalement < 8 Mo, 1080p, sans son).
+          Tant qu'elle est commentée, le placeholder .hero__placeholder s'affiche.
+        -->
+        <!--
+        <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+          <source src="assets/videos/hero.mp4" type="video/mp4">
+        </video>
+        -->
+        <div class="hero__placeholder"></div>
+      </div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <!-- Habillage "viseur caméra" -->
+      <div class="viewfinder" aria-hidden="true">
+        <span class="viewfinder__corner viewfinder__corner--tl"></span>
+        <span class="viewfinder__corner viewfinder__corner--tr"></span>
+        <span class="viewfinder__corner viewfinder__corner--bl"></span>
+        <span class="viewfinder__corner viewfinder__corner--br"></span>
+        <span class="viewfinder__rec"><i></i>REC</span>
+        <span class="viewfinder__tc" data-timecode>00:00:00:00</span>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow reveal">Behind The Scene — Studio de contenu cinéma</p>
+        <h1 class="hero__title reveal">
+          Le tournage devient <em>votre contenu.</em>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Nous créons directement sur les plateaux des contenus courts pour raconter les films autrement sur les réseaux sociaux.
+        </p>
+        <a href="#concept" class="btn reveal">
+          Découvrir le concept
+          <span class="btn__arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ 2. LE CONCEPT ============ -->
+    <section class="section concept" id="concept">
+      <div class="container">
+        <p class="section-label reveal">01 / Le concept</p>
+        <div class="concept__grid">
+          <h2 class="title-xl reveal">Une nouvelle façon de raconter <em>un film.</em></h2>
+          <div class="concept__text reveal">
+            <p>
+              Un tournage, ce sont des semaines de moments auxquels le public n'a normalement jamais accès.
+            </p>
+            <p>
+              Behind The Scene transforme ces moments en contenus courts, naturels et conçus spécifiquement pour les réseaux sociaux.
+            </p>
+          </div>
+        </div>
+
+        <ul class="tags reveal" aria-label="Ce que nous captons">
+          <li>Coulisses</li>
+          <li>Acteurs</li>
+          <li>Équipe technique</li>
+          <li>Décors</li>
+          <li>Moments spontanés</li>
+          <li>Trends</li>
+          <li>Interviews</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3. MANIFESTE ============ -->
+    <section class="section manifesto">
+      <div class="container">
+        <h2 class="manifesto__title reveal">
+          Le making-of n'est plus <em>une</em> vidéo.
+        </h2>
+
+        <!-- Visuel : 1 film → des dizaines de formats verticaux -->
+        <div class="multiply reveal" aria-hidden="true" data-multiply></div>
+
+        <p class="manifesto__text reveal">
+          Il devient des dizaines de contenus capables de faire vivre un film pendant des semaines ou des mois.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 4. COMMENT ÇA MARCHE ============ -->
+    <section class="section steps">
+      <div class="container">
+        <p class="section-label reveal">02 / Comment ça marche</p>
+        <ol class="steps__list">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Préparer</h3>
+            <p>Nous imaginons en amont les formats et les moments à capter.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Tourner</h3>
+            <p>Un créateur spécialisé rejoint ponctuellement le plateau sans perturber le tournage.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Créer</h3>
+            <p>Coulisses, interviews spontanées, équipe technique, acteurs, trends et moments inattendus.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Livrer</h3>
+            <p>Nous sélectionnons et montons les meilleurs contenus pour les livrer prêts à poster.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 5. EXEMPLES DE CONTENUS ============ -->
+    <section class="section reels">
+      <div class="container">
+        <p class="section-label reveal">03 / Exemples de contenus</p>
+        <h2 class="title-xl reveal">Ce que vos abonnés <em>vont voir.</em></h2>
+      </div>
+
+      <!--
+        CHAQUE CARTE = UNE VIDÉO VERTICALE (9:16).
+        Pour remplacer un placeholder, mets dans .reel__media soit :
+          <video src="assets/videos/reel-1.mp4" muted loop playsinline preload="metadata"></video>
+          <img src="assets/images/reel-1.jpg" alt="">
+        La vidéo se lance au survol (desktop) / quand elle est visible (mobile).
+        La classe "reel--tone-X" ne sert qu'au placeholder coloré.
+      -->
+      <div class="reels__track">
+        <article class="reel reel--tone-1 reveal">
+          <div class="reel__media"></div>
+          <div class="reel__ui">
+            <span class="reel__slate">SC 12 · TK 3</span>
+            <span class="reel__duration">0:38</span>
+            <span class="reel__play" aria-hidden="true"></span>
+            <div class="reel__caption">
+              <h3>Juste après la scène</h3>
+              <p>Un acteur raconte ce qu'il vient de tourner.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="reel reel--tone-2 reveal">
+          <div class="reel__media"></div>
+          <div class="reel__ui">
+            <span class="reel__slate">DÉCOR B · J-1</span>
+            <span class="reel__duration">0:52</span>
+            <span class="reel__play" aria-hidden="true"></span>
+            <div class="reel__caption">
+              <h3>Dans les coulisses</h3>
+              <p>Découverte d'un décor avant le tournage.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="reel reel--tone-3 reveal">
+          <div class="reel__media"></div>
+          <div class="reel__ui">
+            <span class="reel__slate">CHEF OP · J4</span>
+            <span class="reel__duration">1:00</span>
+            <span class="reel__play" aria-hidden="true"></span>
+            <div class="reel__caption">
+              <h3>Ce métier du cinéma</h3>
+              <p>60 secondes avec un membre de l'équipe technique.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="reel reel--tone-4 reveal">
+          <div class="reel__media"></div>
+          <div class="reel__ui">
+            <span class="reel__slate">SC 27 · TK 9</span>
+            <span class="reel__duration">0:21</span>
+            <span class="reel__play" aria-hidden="true"></span>
+            <div class="reel__caption">
+              <h3>Entre deux prises</h3>
+              <p>Un moment spontané capté sur le plateau.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="reel reel--tone-5 reveal">
+          <div class="reel__media"></div>
+          <div class="reel__ui">
+            <span class="reel__slate">PLATEAU 2 · J9</span>
+            <span class="reel__duration">0:15</span>
+            <span class="reel__play" aria-hidden="true"></span>
+            <div class="reel__caption">
+              <h3>Trend on set</h3>
+              <p>Les codes des réseaux adaptés naturellement au film.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 6. PHILOSOPHIE ============ -->
+    <section class="section philosophy">
+      <div class="container philosophy__grid">
+        <div>
+          <p class="section-label reveal">04 / Philosophie</p>
+          <h2 class="title-xl reveal">Du contenu social. <em>Pas de la publicité.</em></h2>
+        </div>
+        <div class="philosophy__text reveal">
+          <p>Nous voulons préserver ce qui rend les coulisses intéressantes : leur spontanéité.</p>
+          <p>Le spectateur doit avoir l'impression d'entrer quelques instants sur le plateau, pas de regarder une publicité pour le film.</p>
+        </div>
+      </div>
+      <div class="container">
+        <p class="values reveal">
+          <span>Naturel</span><i>·</i><span>Cinématographique</span><i>·</i><span>Social</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 7. FIN DE PAGE / CTA ============ -->
+    <section class="section closing" id="contact">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="closing__title reveal">
+          Chaque tournage devrait laisser derrière lui <em>des mois de contenu.</em>
+        </h2>
+        <!-- Remplace l'adresse e-mail ci-dessous -->
+        <a class="btn btn--light reveal" href="mailto:contact@behindthescene.studio?subject=Notre%20prochain%20tournage">
+          Parlons de votre prochain tournage
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>Behind The Scene</span>
+    <span>Studio de contenu cinéma — © <span data-year></span></span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
