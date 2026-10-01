@@ -22,6 +22,7 @@
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { color-scheme: dark; }
 body {
   margin: 0;
   background: var(--black);
@@ -124,13 +125,9 @@ em {
   100% { transform: translate(0, 0); }
 }
 
-/* Apparition au scroll */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
-}
-.reveal.is-visible { opacity: 1; transform: none; }
+/* Apparition au scroll : seuls les éléments hors écran au chargement sont masqués (classe ajoutée par main.js) */
+.reveal { transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
+.reveal.is-pending { opacity: 0; transform: translateY(28px); }
 
 /* ---------- En-tête ---------- */
 .topbar {
@@ -140,7 +137,7 @@ em {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px var(--gutter);
+  padding: calc(22px + env(safe-area-inset-top, 0px)) var(--gutter) 22px;
   mix-blend-mode: difference;
   color: #fff;
 }
@@ -320,12 +317,10 @@ em {
   aspect-ratio: 9 / 16;
   border-radius: 2px;
   background: var(--black);
-  opacity: 0;
-  transform: scale(.4);
   transition: opacity .5s var(--ease), transform .5s var(--ease);
 }
 .multiply span:first-child { background: var(--accent); }
-.multiply.is-visible span { opacity: 1; transform: none; }
+.multiply.is-pending span { opacity: 0; transform: scale(.4); }
 
 /* ---------- 4. Étapes ---------- */
 .steps__list {
@@ -502,6 +497,14 @@ em {
 .closing__title em { text-transform: none; letter-spacing: -.02em; }
 .closing .container { position: relative; z-index: 3; }
 
+.closing__mail {
+  margin-top: 24px;
+  font-size: 14px;
+  letter-spacing: .06em;
+  color: var(--grey);
+  user-select: all;
+}
+
 /* ---------- Pied de page ---------- */
 .footer {
   display: flex;
@@ -559,6 +562,6 @@ em {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal, .multiply span { opacity: 1; transform: none; }
+  .reveal.is-pending, .multiply.is-pending span { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }

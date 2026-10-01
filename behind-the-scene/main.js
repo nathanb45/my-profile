@@ -3,18 +3,26 @@
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // 1. Apparition des éléments au scroll
+//    Les éléments déjà visibles au chargement ne sont jamais masqués.
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
+        entry.target.classList.remove("is-pending");
         revealObserver.unobserve(entry.target);
       }
     });
   },
   { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
 );
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+if (!reducedMotion) {
+  document.querySelectorAll(".reveal").forEach((el) => {
+    if (el.getBoundingClientRect().top > window.innerHeight) {
+      el.classList.add("is-pending");
+      revealObserver.observe(el);
+    }
+  });
+}
 
 // 2. Timecode du viseur (24 images/seconde)
 const timecode = document.querySelector("[data-timecode]");
